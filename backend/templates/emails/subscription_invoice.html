@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your subscription invoice</title>
+  <style>
+    body { margin: 0; padding: 0; background: #f4f4f7; font-family: Arial, sans-serif; color: #333; }
+    .wrapper { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+    .header { background: #1d4ed8; padding: 32px 40px; text-align: center; }
+    .header h1 { margin: 0; color: #fff; font-size: 22px; }
+    .header p { margin: 6px 0 0; color: #c7d2fe; font-size: 13px; }
+    .body { padding: 32px 40px; }
+    .body p { line-height: 1.6; margin: 0 0 16px; }
+    .invoice { width: 100%; border-collapse: collapse; margin: 8px 0 20px; }
+    .invoice td { padding: 10px 0; border-bottom: 1px solid #edf0f5; font-size: 14px; }
+    .invoice td.label { color: #6b7280; }
+    .invoice td.value { text-align: right; color: #111827; font-weight: bold; }
+    .total-box { background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 16px 20px; border-radius: 0 6px 6px 0; margin: 20px 0; }
+    .total-box .amount { font-size: 24px; font-weight: bold; color: #1d4ed8; }
+    .cta { display: inline-block; margin: 8px 0 4px; padding: 14px 32px; background: #1d4ed8; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 15px; }
+    .footer { padding: 20px 40px; background: #f4f4f7; text-align: center; font-size: 13px; color: #888; }
+    .footer a { color: #1d4ed8; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Payment Successful</h1>
+      <p>{{ app_name }} subscription invoice</p>
+    </div>
+    <div class="body">
+      <p>Hi <strong>{{ user.name }}</strong>,</p>
+      <p>
+        Thank you for subscribing to <strong>{{ app_name }}</strong>. Your payment
+        was received successfully and your account is now active. Here are your
+        invoice details:
+      </p>
+
+      <table class="invoice">
+        <tr>
+          <td class="label">Invoice / Transaction</td>
+          <td class="value">{{ transaction_id }}</td>
+        </tr>
+        {% if user.business_name %}
+        <tr>
+          <td class="label">Business</td>
+          <td class="value">{{ user.business_name }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td class="label">Plan</td>
+          <td class="value">{{ plan.name }}</td>
+        </tr>
+        {% if plan.billing_cycle %}
+        <tr>
+          <td class="label">Billing cycle</td>
+          <td class="value">{{ plan.billing_cycle|title }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td class="label">Payment date</td>
+          <td class="value">{{ paid_at|date:"d M Y, g:i a" }}</td>
+        </tr>
+        <tr>
+          <td class="label">Start date</td>
+          <td class="value">{{ start_date|date:"d M Y" }}</td>
+        </tr>
+        <tr>
+          <td class="label">Next billing date</td>
+          <td class="value">{{ next_billing_date|date:"d M Y" }}</td>
+        </tr>
+      </table>
+
+      <div class="total-box">
+        Amount paid<br />
+        <span class="amount">{{ currency_symbol }}{{ amount }}</span>
+      </div>
+
+      <p style="text-align:center;">
+        <a href="{{ login_url }}" class="cta">Log In to Your Account</a>
+      </p>
+
+      <p>
+        Please keep this email as your payment receipt. If you have any questions
+        about your subscription or this invoice, our support team is here to help:
+      </p>
+      <p>
+        📧 <a href="mailto:{{ support_email }}">{{ support_email }}</a>
+        {% if support_phone %}<br />📞 {{ support_phone }}{% endif %}
+      </p>
+
+      <p>— The {{ app_name }} Team</p>
+    </div>
+    <div class="footer">
+      &copy; {{ app_name }} &middot; This is an automated invoice email.
+    </div>
+  </div>
+</body>
+</html>

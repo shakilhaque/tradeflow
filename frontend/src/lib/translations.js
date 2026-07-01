@@ -1,0 +1,181 @@
+/**
+ * Translation dictionaries, keyed by the English source string.
+ *
+ * Design: the key IS the English text that appears in the UI. `t('Dashboard')`
+ * returns the Bangla string when the active language is `bn`, and falls back to
+ * the English key itself when no translation exists (or when language is `en`).
+ * That makes wrapping incremental and safe — an un-translated string simply
+ * renders in English instead of breaking.
+ *
+ * To add Bangla for a new string: add `'English source': 'বাংলা',` below.
+ */
+export const translations = {
+  bn: {
+    // ── Sidebar group titles ───────────────────────────────────────────
+    WORKSPACE: 'ওয়ার্কস্পেস',
+    MANAGE: 'ব্যবস্থাপনা',
+    PLATFORM: 'প্ল্যাটফর্ম',
+
+    // ── Navigation / breadcrumbs ───────────────────────────────────────
+    Workspace: 'ওয়ার্কস্পেস',
+    Dashboard: 'ড্যাশবোর্ড',
+
+    Sales: 'বিক্রয়',
+    'All Sales': 'সকল বিক্রয়',
+    'Add Sale': 'বিক্রয় যোগ করুন',
+    'New Sale': 'নতুন বিক্রয়',
+    'Sales on POS': 'পিওএস বিক্রয়',
+    'Sales List POS': 'পিওএস বিক্রয় তালিকা',
+    POS: 'পিওএস',
+    Drafts: 'খসড়া',
+    'New Draft': 'নতুন খসড়া',
+    'Sale Return': 'বিক্রয় ফেরত',
+    'Sale Returns': 'বিক্রয় ফেরত',
+    'New Return': 'নতুন ফেরত',
+    'List Quotation': 'কোটেশন তালিকা',
+    'Add Quotation': 'কোটেশন যোগ করুন',
+    Quotations: 'কোটেশন',
+    Shipments: 'চালান',
+    Discounts: 'ছাড়',
+    'Import from Excel': 'এক্সেল থেকে ইম্পোর্ট',
+    Import: 'ইম্পোর্ট',
+
+    Products: 'পণ্য',
+    'List Products': 'পণ্য তালিকা',
+    'Add Product': 'পণ্য যোগ করুন',
+    'Import Products': 'পণ্য ইম্পোর্ট',
+    'Import Opening Stock': 'ওপেনিং স্টক ইম্পোর্ট',
+    'Import Stock': 'স্টক ইম্পোর্ট',
+    'Print Labels': 'লেবেল প্রিন্ট',
+    Categories: 'ক্যাটাগরি',
+    Brands: 'ব্র্যান্ড',
+    Units: 'একক',
+    Warranties: 'ওয়ারেন্টি',
+
+    'Stock Transfer': 'স্টক ট্রান্সফার',
+    'List Stock Transfer': 'স্টক ট্রান্সফার তালিকা',
+    'Add Stock Transfer': 'স্টক ট্রান্সফার যোগ করুন',
+
+    Purchases: 'ক্রয়',
+    'All Purchases': 'সকল ক্রয়',
+    'New Purchase': 'নতুন ক্রয়',
+    'Purchase Returns': 'ক্রয় ফেরত',
+
+    Contacts: 'যোগাযোগ',
+    Customers: 'গ্রাহক',
+    'Customer Groups': 'গ্রাহক গ্রুপ',
+    Suppliers: 'সরবরাহকারী',
+    'Import Contacts': 'যোগাযোগ ইম্পোর্ট',
+
+    Expenses: 'খরচ',
+    'All Expenses': 'সকল খরচ',
+    'Record Expense': 'খরচ রেকর্ড করুন',
+    'Expense Categories': 'খরচের ক্যাটাগরি',
+    Record: 'রেকর্ড',
+
+    'Payment Accounts': 'পেমেন্ট অ্যাকাউন্ট',
+    'List Accounts': 'অ্যাকাউন্ট তালিকা',
+    'Balance Sheet': 'ব্যালেন্স শিট',
+    'Trial Balance': 'ট্রায়াল ব্যালেন্স',
+    'Cash Flow': 'ক্যাশ ফ্লো',
+    'Payment Account Report': 'পেমেন্ট অ্যাকাউন্ট রিপোর্ট',
+    Accounting: 'হিসাবরক্ষণ',
+    'Journal Entries': 'জার্নাল এন্ট্রি',
+    'Chart of Accounts': 'চার্ট অব অ্যাকাউন্টস',
+
+    Reports: 'রিপোর্ট',
+    'Profit / Loss Report': 'লাভ / ক্ষতি রিপোর্ট',
+    'Sales Report': 'বিক্রয় রিপোর্ট',
+    'Stock Report': 'স্টক রিপোর্ট',
+    'Expense Report': 'খরচ রিপোর্ট',
+    'Tax Report': 'ট্যাক্স রিপোর্ট',
+    'Product Report': 'পণ্য রিপোর্ট',
+    'Service Staff Report': 'সার্ভিস স্টাফ রিপোর্ট',
+    'Sales Representative Report': 'বিক্রয় প্রতিনিধি রিপোর্ট',
+    'Register Report': 'রেজিস্টার রিপোর্ট',
+    'Sell Payment Report': 'বিক্রয় পেমেন্ট রিপোর্ট',
+    'Purchase Payment Report': 'ক্রয় পেমেন্ট রিপোর্ট',
+    'Purchase & Sale Report': 'ক্রয় ও বিক্রয় রিপোর্ট',
+    'Customers & Suppliers': 'গ্রাহক ও সরবরাহকারী',
+    'Activity Log': 'কার্যকলাপ লগ',
+    Stock: 'স্টক',
+    Tax: 'ট্যাক্স',
+    'Service Staff': 'সার্ভিস স্টাফ',
+    'Sales Representative': 'বিক্রয় প্রতিনিধি',
+    Register: 'রেজিস্টার',
+    'Sell Payments': 'বিক্রয় পেমেন্ট',
+    'Purchase Payments': 'ক্রয় পেমেন্ট',
+    'Purchase & Sale': 'ক্রয় ও বিক্রয়',
+
+    'User Management': 'ব্যবহারকারী ব্যবস্থাপনা',
+    Users: 'ব্যবহারকারী',
+    Roles: 'ভূমিকা',
+    Subscription: 'সাবস্ক্রিপশন',
+    Settings: 'সেটিংস',
+    'Business Settings': 'ব্যবসা সেটিংস',
+    'Customer Profile': 'কাস্টমার প্রোফাইল',
+    Locations: 'অবস্থান',
+    'Audit Log': 'অডিট লগ',
+    Manage: 'ব্যবস্থাপনা',
+    Imports: 'ইম্পোর্ট',
+    Detail: 'বিস্তারিত',
+    New: 'নতুন',
+
+    // ── Platform admin nav ─────────────────────────────────────────────
+    Tenants: 'টেন্যান্ট',
+    'Tenant Management': 'টেন্যান্ট ব্যবস্থাপনা',
+    'Clients & Billing': 'ক্লায়েন্ট ও বিলিং',
+    Subscriptions: 'সাবস্ক্রিপশন',
+    Plans: 'প্ল্যান',
+    "Client's Info": 'ক্লায়েন্ট তথ্য',
+    'Notice Board': 'নোটিশ বোর্ড',
+    'Bulk SMS': 'বাল্ক এসএমএস',
+    Referrals: 'রেফারেল',
+    'Admin Users': 'অ্যাডমিন ব্যবহারকারী',
+
+    // ── Header / user dropdown ─────────────────────────────────────────
+    'Billing & Subscription': 'বিলিং ও সাবস্ক্রিপশন',
+    'Sign out': 'সাইন আউট',
+    Owner: 'মালিক',
+    Admin: 'অ্যাডমিন',
+    Manager: 'ম্যানেজার',
+    Cashier: 'ক্যাশিয়ার',
+    Language: 'ভাষা',
+
+    // ── Dashboard ──────────────────────────────────────────────────────
+    'Good morning': 'শুভ সকাল',
+    'Good afternoon': 'শুভ অপরাহ্ন',
+    'Good evening': 'শুভ সন্ধ্যা',
+    'View Reports': 'রিপোর্ট দেখুন',
+    'Business Overview': 'ব্যবসার সারসংক্ষেপ',
+    'Filter by date': 'তারিখ অনুযায়ী ফিল্টার',
+    'Purchases, sales, dues, returns and expense for the selected period. Updates automatically every 30 seconds.':
+      'নির্বাচিত সময়ের ক্রয়, বিক্রয়, বকেয়া, ফেরত ও খরচ। প্রতি ৩০ সেকেন্ডে স্বয়ংক্রিয়ভাবে আপডেট হয়।',
+    Date: 'তারিখ',
+    'Items Sold': 'বিক্রিত পণ্য',
+    Orders: 'অর্ডার',
+    Revenue: 'আয়',
+    Cost: 'খরচ',
+    Profit: 'লাভ',
+    'Top Products': 'শীর্ষ পণ্য',
+    'Top Sellers': 'শীর্ষ বিক্রেতা',
+    'Recent Sales': 'সাম্প্রতিক বিক্রয়',
+    'Recent finalized transactions': 'সাম্প্রতিক সম্পন্ন লেনদেন',
+    'No sales in the selected period.': 'নির্বাচিত সময়ে কোনো বিক্রয় নেই।',
+    Invoice: 'ইনভয়েস',
+    Customer: 'গ্রাহক',
+    Total: 'মোট',
+    Payment: 'পেমেন্ট',
+    'Walk-in': 'ওয়াক-ইন',
+
+    // ── Common ─────────────────────────────────────────────────────────
+    Save: 'সংরক্ষণ করুন',
+    Cancel: 'বাতিল',
+    Delete: 'মুছুন',
+    Edit: 'সম্পাদনা',
+    Actions: 'অ্যাকশন',
+    Search: 'খুঁজুন',
+    Status: 'স্ট্যাটাস',
+    Loading: 'লোড হচ্ছে',
+  },
+}

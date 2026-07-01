@@ -1,0 +1,24 @@
+Welcome to {{ app_name }}!
+
+Hi {{ user.name }},
+
+Thank you for subscribing to {{ app_name }}.
+Your payment has been received and your account is now active.
+
+YOUR LOGIN DETAILS
+------------------
+Email:    {{ user.email }}
+Username: {{ user.username }}
+
+SET YOUR PASSWORD (expires in {{ expiry_minutes }} minutes)
+-----------------------------------------------------------
+{{ set_password_url }}
+
+Click the link above to set your password and activate your account.
+
+Once done, log in at:
+{{ login_url }}
+
+---
+Need help? Contact {{ support_email }}
+If you didn't sign up, please ignore this email.

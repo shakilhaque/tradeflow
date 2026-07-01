@@ -1,0 +1,28 @@
+{{ app_name }} — SUBSCRIPTION RENEWAL REMINDER
+==============================================
+
+Dear {{ user.name|default:"Valued Client" }},
+
+This is a friendly reminder that your {{ app_name }} subscription is due for renewal.
+
+------------------------------------------------
+SUBSCRIPTION DETAILS
+------------------------------------------------
+Plan            : {{ subscription.plan.name|default:"—" }}
+Billing Cycle   : Monthly
+Amount Due      : {{ currency_symbol|default:"৳" }} {{ amount_due|default:subscription.plan.price }}
+Currency        : {{ currency|default:"BDT" }}
+Account Holder  : {{ user.name|default:"—" }}
+Account Email   : {{ user.email }}
+Due Date        : {{ expiry_date }}
+Status          : Renewal Pending
+------------------------------------------------
+
+To avoid any service interruption, please renew before the due date:
+
+  {{ pay_now_url }}
+
+If you have any questions, contact us at {{ support_email }}.
+
+— The {{ app_name }} Team
+This is an automated notification, please do not reply.

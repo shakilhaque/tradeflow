@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-white font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Remove default button styles */
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.gray.300') transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: theme('colors.gray.300');
+    border-radius: 999px;
+  }
+}
+
+/* ── Responsive data tables ───────────────────────────────────────────────
+   Almost every list / report table is rendered as `w-full` inside an
+   `.overflow-x-auto` wrapper. On wide screens that fills the container
+   nicely. On phones and tablets, `w-full` alone makes the browser CRUSH the
+   columns — currency cells wrap the "৳" onto its own line, headers stack,
+   and the whole grid looks broken (this is the "different view on every
+   device" problem).
+
+   Below `lg` (1024px) we give those tables a minimum width so the wrapper
+   scrolls horizontally instead of crushing. Cells still wrap normally
+   within that width, so text-heavy columns aren't over-stretched. Desktop
+   (lg+) is left untouched, so any narrow card that scrolls on purpose keeps
+   its current behaviour. One rule makes every list page consistent across
+   devices without touching 80 files. */
+@media (max-width: 1023.98px) {
+  .overflow-x-auto table {
+    min-width: 56rem; /* ~896px — enough to stop column crush on small screens */
+  }
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch; /* momentum scroll on iOS */
+  }
+}
+
+/* ── Readability: darken muted secondary text in page content ──────────────
+   `text-gray-400` (#9ca3af) is used widely for secondary text — invoice refs
+   under a customer name, sub-labels, hints. On white cards/tables it's too
+   faint to read comfortably. Bump it one step darker (gray-500) but ONLY
+   inside the main content area, so the dark sidebar / footers (which use
+   gray-400 as a *light* label on a dark background) are left untouched. */
+main .text-gray-400 {
+  color: #6b7280; /* gray-500 — clearer on white without flattening hierarchy */
+}
+
+/* ── System tab → "Show help text" toggle ─────────────────────────────── */
+/* When the user turns help text off in Business Settings, hide all the
+   helper hints that follow form fields. Any `.field-hint`, the auto-class
+   we sprinkle on hint <p> elements, plus the small grey lines we usually
+   render with the `text-[10px] text-gray-400` Tailwind combo when they
+   directly follow an input/select/textarea. */
+body.hide-help-text .field-hint,
+body.hide-help-text [data-help-text="true"] {
+  display: none !important;
+}
+
+/* ── Theme color variables (defaults populated at runtime in SettingsContext) */
+:root {
+  --theme-50:  #ecfdf5;  --theme-50-rgb:  236 253 245;
+  --theme-100: #d1fae5;  --theme-100-rgb: 209 250 229;
+  --theme-200: #a7f3d0;  --theme-200-rgb: 167 243 208;
+  --theme-300: #6ee7b7;  --theme-300-rgb: 110 231 183;
+  --theme-400: #34d399;  --theme-400-rgb: 52 211 153;
+  --theme-500: #10b981;  --theme-500-rgb: 16 185 129;
+  --theme-600: #059669;  --theme-600-rgb: 5 150 105;
+  --theme-700: #047857;  --theme-700-rgb: 4 120 87;
+  --theme-800: #065f46;  --theme-800-rgb: 6 95 70;
+  --theme-900: #064e3b;  --theme-900-rgb: 6 78 59;
+  --theme-950: #022c22;  --theme-950-rgb: 2 44 34;
+}

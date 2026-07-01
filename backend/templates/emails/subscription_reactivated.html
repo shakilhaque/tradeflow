@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your account has been reactivated</title>
+  <style>
+    body { margin: 0; padding: 0; background: #f4f4f7; font-family: Arial, sans-serif; color: #333; }
+    .wrapper { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+    .header { background: #38a169; padding: 32px 40px; text-align: center; }
+    .header h1 { margin: 0; color: #fff; font-size: 24px; }
+    .body { padding: 32px 40px; }
+    .body p { line-height: 1.6; margin: 0 0 16px; }
+    .cta { display: inline-block; margin: 24px 0; padding: 14px 32px; background: #3182ce; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; }
+    .info-box { background: #f0fff4; border-left: 4px solid #38a169; padding: 16px 20px; border-radius: 0 6px 6px 0; margin: 20px 0; }
+    .footer { padding: 20px 40px; background: #f4f4f7; text-align: center; font-size: 13px; color: #888; }
+    .footer a { color: #3182ce; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Account Reactivated</h1>
+    </div>
+    <div class="body">
+      <p>Hi <strong>{{ user.name }}</strong>,</p>
+      <p>
+        Great news! Your <strong>{{ app_name }}</strong> account has been
+        <strong>reactivated</strong>. Your payment was received successfully and you
+        now have full access again.
+      </p>
+      <div class="info-box">
+        <strong>Plan:</strong> {{ subscription.plan.name }}<br />
+        <strong>Next billing date:</strong> {{ subscription.next_billing_date }}
+      </div>
+      <p>
+        Log in now to pick up right where you left off.
+      </p>
+      <p style="text-align:center;">
+        <a href="{{ login_url }}" class="cta">Log In</a>
+      </p>
+      <p>
+        Thank you for staying with us. If you have any questions,
+        reach out to us any time.
+      </p>
+      <p>— The {{ app_name }} Team</p>
+    </div>
+    <div class="footer">
+      &copy; {{ app_name }}
+    </div>
+  </div>
+</body>
+</html>

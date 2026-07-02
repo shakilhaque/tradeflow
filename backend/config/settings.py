@@ -86,7 +86,7 @@ DATABASES = {
     "default": dj_database_url.config(
         default=config(
             "DATABASE_URL",
-            default="postgresql://postgres:postgres@localhost:5432/nsl_pos",
+            default="postgresql://postgres:postgres@localhost:5432/trade_pos",
         )
     )
 }

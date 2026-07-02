@@ -27,7 +27,7 @@ Single-client point-of-sale, inventory and accounting system.
 ### 1. Create the database
 
 ```bash
-psql -U postgres -c "CREATE DATABASE nsl_pos"
+psql -U postgres -c "CREATE DATABASE trade_pos"
 ```
 
 ### 2. Backend
@@ -50,7 +50,7 @@ Backend serves at <http://127.0.0.1:8003>.
 Create the first login (owner):
 
 ```bash
-python manage.py shell -c "from accounts.models import User; User.objects.create_user(email='owner@nslpos.com', name='Owner', password='Owner@1234', role='owner', is_active=True, is_staff=True, is_superuser=True, is_first_login=False)"
+python manage.py shell -c "from accounts.models import User; User.objects.create_user(email='owner@tradeflow.local', name='Owner', password='Owner@1234', role='owner', is_active=True, is_staff=True, is_superuser=True, is_first_login=False)"
 ```
 
 ### 3. Frontend

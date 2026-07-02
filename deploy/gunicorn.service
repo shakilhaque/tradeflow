@@ -1,16 +1,16 @@
 [Unit]
-Description=Gunicorn daemon for Iffaa Accounting (Django)
+Description=Gunicorn daemon for TradeFlow (Django)
 After=network.target postgresql.service
 
 [Service]
 Type=notify
-User=nsl
-Group=nsl
-WorkingDirectory=/var/www/html/nsl-iffaa-application/backend
-Environment="PATH=/var/www/html/nsl-iffaa-application/backend/.venv/bin"
-EnvironmentFile=/var/www/html/nsl-iffaa-application/backend/.env
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/tradeflow/backend
+Environment="PATH=/var/www/tradeflow/backend/.venv/bin"
+EnvironmentFile=/var/www/tradeflow/backend/.env
 
-ExecStart=/var/www/html/nsl-iffaa-application/backend/.venv/bin/gunicorn \
+ExecStart=/var/www/tradeflow/backend/.venv/bin/gunicorn \
     --workers 3 \
     --bind 127.0.0.1:8003 \
     --timeout 60 \

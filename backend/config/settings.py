@@ -12,6 +12,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY    = config("SECRET_KEY")
 DEBUG         = config("DEBUG", cast=bool, default=True)
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv(), default="localhost,127.0.0.1")
+# Full origins (scheme://host[:port]) trusted for unsafe cross-origin POSTs —
+# needed for the Django admin login over a bare IP/domain in production.
+# Set in .env, e.g. CSRF_TRUSTED_ORIGINS=http://103.231.238.199
+CSRF_TRUSTED_ORIGINS = config("CSRF_TRUSTED_ORIGINS", cast=Csv(), default="")
 
 # ── Apps ──────────────────────────────────────────────────────────────────────
 INSTALLED_APPS = [

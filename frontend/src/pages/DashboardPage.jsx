@@ -249,7 +249,7 @@ export default function DashboardPage() {
             .catch(() => {})
         : Promise.resolve(),
       has('can_manage_purchases') || has('can_view_reports')
-        ? getPurchases({ payment_status: 'due', limit: 5 })
+        ? getPurchases({ payment_status: 'due,partial', limit: 5 })
             .then((d) => setDuePurchases(Array.isArray(d) ? d : (d?.results ?? [])))
             .catch(() => {})
         : Promise.resolve(),

@@ -175,7 +175,13 @@ class PurchaseListCreateView(APIView):
         if s := request.query_params.get("status"):
             qs = qs.filter(status=s.lower())
         if ps := request.query_params.get("payment_status"):
-            qs = qs.filter(payment_status=ps.lower())
+            # Accept a single value ("due") or a comma-separated list
+            # ("due,partial") so callers can request all outstanding purchases.
+            values = [v.strip().lower() for v in ps.split(",") if v.strip()]
+            if len(values) == 1:
+                qs = qs.filter(payment_status=values[0])
+            elif values:
+                qs = qs.filter(payment_status__in=values)
         if sid := request.query_params.get("supplier_id"):
             qs = qs.filter(supplier_id=sid)
         if lid := request.query_params.get("location_id"):

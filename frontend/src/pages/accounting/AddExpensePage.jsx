@@ -237,7 +237,7 @@ export default function AddExpensePage() {
 
   return (
     <div className="space-y-5 pb-28">
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <h1 className="text-xl font-semibold">Record Expense</h1>
         <p className="mt-0.5 text-sm text-emerald-50">
           Record an operational expense. A balanced journal entry is created automatically.
@@ -370,7 +370,7 @@ export default function AddExpensePage() {
 
       {/* ── Add Payment ───────────────────────────────────────────────────── */}
       <Card padding="p-0" className="overflow-hidden">
-        <div className="bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-white">
+        <div className="bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-white">
           <h3 className="text-base font-semibold">Add Payment</h3>
         </div>
         <div className="p-5 space-y-4">
@@ -502,7 +502,7 @@ export default function AddExpensePage() {
 function SectionHeader({ title }) {
   return (
     <div className="flex items-center gap-3 mb-5">
-      <span className="h-7 w-1 rounded bg-gradient-to-b from-emerald-500 to-teal-500" />
+      <span className="h-7 w-1 rounded bg-gradient-to-b from-indigo-600 to-cyan-500" />
       <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">{title}</h2>
     </div>
   )

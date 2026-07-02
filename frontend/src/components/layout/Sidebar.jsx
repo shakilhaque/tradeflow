@@ -304,7 +304,7 @@ export default function Sidebar({
 
       <aside
         className={[
-          'fixed inset-y-0 left-0 z-30 flex w-64 flex-col bg-navy-900 border-r border-navy-800',
+          'fixed inset-y-0 left-0 z-30 flex w-64 flex-col bg-white border-r border-gray-200',
           'transition-[width,transform] duration-200 ease-out',
           widthClass,
           'lg:translate-x-0 lg:static lg:z-auto',
@@ -314,7 +314,7 @@ export default function Sidebar({
         {/* ── Workspace card ── */}
         <div className="px-3 pt-4 pb-3 shrink-0">
           <div className={[
-            'flex items-center rounded-xl border border-navy-700 bg-navy-800 shadow-sm',
+            'flex items-center rounded-xl border border-gray-200 bg-gray-50 shadow-sm',
             collapsed ? 'justify-center p-1.5' : 'gap-2 px-2.5 py-2',
           ].join(' ')}>
             {/* Sidebar brand.
@@ -353,7 +353,7 @@ export default function Sidebar({
             {!collapsed && (
               <>
                 <div className="min-w-0 flex-1">
-                  <p className="text-sm font-bold text-white truncate leading-tight">
+                  <p className="text-sm font-bold text-navy-800 truncate leading-tight">
                     {isPlatformAdmin
                       ? 'Platform Admin'
                       : (companyProfile?.name || user?.business_name || '—')}
@@ -364,7 +364,7 @@ export default function Sidebar({
                 </div>
                 <button
                   onClick={onToggleCollapsed}
-                  className="hidden lg:flex items-center justify-center w-7 h-7 rounded-md text-gray-400 hover:text-white hover:bg-navy-700"
+                  className="hidden lg:flex items-center justify-center w-7 h-7 rounded-md text-gray-400 hover:text-navy-900 hover:bg-gray-100"
                   aria-label="Collapse sidebar"
                   title="Collapse"
                 >
@@ -372,7 +372,7 @@ export default function Sidebar({
                 </button>
                 <button
                   onClick={onMobileClose}
-                  className="lg:hidden text-gray-400 hover:text-white"
+                  className="lg:hidden text-gray-400 hover:text-navy-900"
                   aria-label="Close menu"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -385,7 +385,7 @@ export default function Sidebar({
           {collapsed && (
             <button
               onClick={onToggleCollapsed}
-              className="hidden lg:flex mt-2 w-full items-center justify-center h-7 rounded-md text-gray-400 hover:text-white hover:bg-navy-700"
+              className="hidden lg:flex mt-2 w-full items-center justify-center h-7 rounded-md text-gray-400 hover:text-navy-900 hover:bg-gray-100"
               aria-label="Expand sidebar"
               title="Expand"
             >
@@ -398,7 +398,7 @@ export default function Sidebar({
         {!collapsed && (
           <div className="px-3 pb-3 shrink-0">
             <div ref={searchBoxRef} className="relative">
-              <div className="flex items-center gap-2 rounded-lg border border-navy-700 bg-navy-800 px-3 py-2 hover:border-navy-600 focus-within:border-brand-500 focus-within:ring-2 focus-within:ring-brand-900/40 transition">
+              <div className="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 hover:border-gray-300 focus-within:border-brand-500 focus-within:ring-2 focus-within:ring-brand-100 transition">
                 <svg className="w-4 h-4 text-gray-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M9 3a6 6 0 104.472 10.03l3.249 3.247a.75.75 0 101.06-1.06l-3.247-3.249A6 6 0 009 3zM4.5 9a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z" clipRule="evenodd" />
                 </svg>
@@ -410,15 +410,15 @@ export default function Sidebar({
                   onFocus={() => setSearchOpen(true)}
                   onKeyDown={onSearchKeyDown}
                   placeholder="Search pages…"
-                  className="flex-1 bg-transparent text-sm text-gray-100 outline-none placeholder:text-gray-400"
+                  className="flex-1 bg-transparent text-sm text-gray-800 outline-none placeholder:text-gray-400"
                 />
-                <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded border border-navy-700 bg-navy-900 text-[10px] font-medium text-gray-400">
+                <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded border border-gray-200 bg-white text-[10px] font-medium text-gray-400">
                   ⌘K
                 </kbd>
               </div>
 
               {searchOpen && query.trim() && (
-                <div className="absolute left-0 right-0 top-full z-30 mt-1 overflow-hidden rounded-lg border border-navy-700 bg-navy-800 shadow-xl">
+                <div className="absolute left-0 right-0 top-full z-30 mt-1 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-xl">
                   {results.length === 0 ? (
                     <div className="px-3 py-3 text-xs text-gray-400">No matching pages.</div>
                   ) : (
@@ -429,7 +429,7 @@ export default function Sidebar({
                         onMouseEnter={() => setActiveIdx(idx)}
                         onClick={() => goToResult(r)}
                         className={`flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-sm transition ${
-                          idx === activeIdx ? 'bg-brand-600 text-white' : 'text-gray-200 hover:bg-navy-700'
+                          idx === activeIdx ? 'bg-brand-600 text-white' : 'text-gray-700 hover:bg-gray-100'
                         }`}
                       >
                         <span className="truncate">{r.label}</span>
@@ -446,7 +446,7 @@ export default function Sidebar({
           <div className="px-3 pb-3 shrink-0">
             <button
               onClick={onToggleCollapsed}
-              className="hidden lg:flex w-full items-center justify-center h-9 rounded-lg border border-navy-700 bg-navy-800 hover:bg-navy-700 text-gray-300"
+              className="hidden lg:flex w-full items-center justify-center h-9 rounded-lg border border-gray-200 bg-gray-50 hover:bg-gray-100 text-gray-500"
               title="Search"
               aria-label="Search"
             >
@@ -472,7 +472,7 @@ export default function Sidebar({
                   </p>
                 )}
                 {group && collapsed && (
-                  <div className="mt-3 mb-1.5 border-t border-navy-800" />
+                  <div className="mt-3 mb-1.5 border-t border-gray-200" />
                 )}
                 <ul className="space-y-0.5">
                   {visible.map((item) =>
@@ -504,16 +504,16 @@ export default function Sidebar({
         </nav>
 
         {/* ── User footer ── */}
-        <div className="border-t border-navy-800 px-3 py-3 shrink-0">
+        <div className="border-t border-gray-200 px-3 py-3 shrink-0">
           <div className={[
-            'flex items-center rounded-lg hover:bg-navy-800 transition cursor-default',
+            'flex items-center rounded-lg hover:bg-gray-100 transition cursor-default',
             collapsed ? 'justify-center py-1' : 'gap-2.5 px-1 py-1.5',
           ].join(' ')}>
             <UserAvatar src={user?.profile_picture} name={user?.name} size="md" />
             {!collapsed && (
               <>
                 <div className="min-w-0 flex-1">
-                  <p className="text-sm font-semibold text-white truncate leading-tight">{user?.name || '—'}</p>
+                  <p className="text-sm font-semibold text-navy-800 truncate leading-tight">{user?.name || '—'}</p>
                   <p className="text-xs text-gray-400 truncate leading-tight capitalize">
                     {user?.role || (isPlatformAdmin ? 'Platform admin' : 'Member')}
                   </p>
@@ -521,7 +521,7 @@ export default function Sidebar({
                 <button
                   onClick={logout}
                   title="Sign out"
-                  className="text-gray-400 hover:text-rose-400 transition p-1.5 rounded hover:bg-navy-800"
+                  className="text-gray-400 hover:text-rose-600 transition p-1.5 rounded hover:bg-rose-50"
                 >
                   <LogoutIcon />
                 </button>
@@ -532,7 +532,7 @@ export default function Sidebar({
             <button
               onClick={logout}
               title="Sign out"
-              className="mt-1 hidden lg:flex w-full items-center justify-center h-8 rounded-md text-gray-400 hover:text-rose-400 hover:bg-navy-800 transition"
+              className="mt-1 hidden lg:flex w-full items-center justify-center h-8 rounded-md text-gray-400 hover:text-rose-600 hover:bg-rose-50 transition"
             >
               <LogoutIcon />
             </button>
@@ -563,7 +563,7 @@ function LeafItem({ item, collapsed, onLeafClick, onMobileClose }) {
           collapsed ? 'lg:justify-center lg:px-0 lg:py-2.5 gap-2.5 px-2.5 py-2' : 'gap-2.5 px-2.5 py-2',
           isActive
             ? 'bg-brand-600 text-white shadow-sm'
-            : 'text-gray-300 hover:bg-navy-800 hover:text-white',
+            : 'text-gray-600 hover:bg-gray-100 hover:text-navy-900',
         ].join(' ')}
       >
         {({ isActive }) => (
@@ -631,11 +631,11 @@ function CollapsibleItem({ item, hasPerms, collapsed, onLeafClick, onMobileClose
           'group relative w-full flex items-center rounded-lg text-[13.5px] font-medium transition-colors duration-100',
           collapsed ? 'lg:justify-center lg:px-0 lg:py-2.5 gap-2.5 px-2.5 py-2' : 'gap-2.5 px-2.5 py-2',
           childActive
-            ? (collapsed ? 'bg-brand-600' : 'text-white')
-            : 'text-gray-300 hover:bg-navy-800 hover:text-white',
+            ? (collapsed ? 'bg-brand-600 text-white' : 'text-brand-700')
+            : 'text-gray-600 hover:bg-gray-100 hover:text-navy-900',
         ].join(' ')}
       >
-        <span className={`w-[18px] h-[18px] shrink-0 ${childActive ? 'text-white' : 'text-gray-400'}`}>
+        <span className={`w-[18px] h-[18px] shrink-0 ${childActive ? 'text-brand-600' : 'text-gray-400'}`}>
           {item.icon}
         </span>
         {!collapsed && (
@@ -657,7 +657,7 @@ function CollapsibleItem({ item, hasPerms, collapsed, onLeafClick, onMobileClose
       </button>
 
       {open && !collapsed && (
-        <ul className="mt-0.5 ml-3 pl-3.5 border-l border-navy-700 space-y-0.5">
+        <ul className="mt-0.5 ml-3 pl-3.5 border-l border-gray-200 space-y-0.5">
           {visibleChildren.map((child) => (
             <li key={child.path}>
               <NavLink
@@ -668,7 +668,7 @@ function CollapsibleItem({ item, hasPerms, collapsed, onLeafClick, onMobileClose
                   'block rounded-md px-2.5 py-1.5 text-[13px] font-medium transition-colors duration-100',
                   isActive
                     ? 'bg-brand-600 text-white shadow-sm'
-                    : 'text-gray-400 hover:bg-navy-800 hover:text-white',
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-navy-900',
                 ].join(' ')}
               >
                 {t(child.label)}

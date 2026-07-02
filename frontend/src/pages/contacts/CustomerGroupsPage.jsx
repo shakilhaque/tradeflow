@@ -182,7 +182,7 @@ export default function CustomerGroupsPage() {
   return (
     <div className="space-y-5">
       {/* ── Heading ───────────────────────────────────────────────────────── */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 shadow-sm flex items-center justify-between gap-3 flex-wrap">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 shadow-sm flex items-center justify-between gap-3 flex-wrap">
         <div>
           <h1 className="text-xl font-bold text-white tracking-tight">Customer Groups</h1>
           <p className="text-xs text-emerald-50 mt-0.5">
@@ -662,8 +662,8 @@ function buildCsv(rows) {
 
 function Kpi({ label, value, accent = 'emerald' }) {
   const COLORS = {
-    emerald: 'from-emerald-50 to-emerald-100 ring-emerald-200 text-emerald-700',
-    green:   'from-green-50 to-green-100 ring-green-200 text-green-700',
+    emerald: 'from-indigo-50 to-cyan-100 ring-emerald-200 text-emerald-700',
+    green:   'from-indigo-50 to-cyan-100 ring-green-200 text-green-700',
     teal:    'from-teal-50 to-teal-100 ring-teal-200 text-teal-700',
   }
   return (

@@ -855,7 +855,7 @@ export default function AllSales({
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-5 py-5 shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-5 py-5 shadow-sm">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight text-white">{pageTitle}</h1>
@@ -1129,7 +1129,7 @@ export default function AllSales({
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
           <div className="text-xs font-medium uppercase tracking-wide text-slate-500">Total Paid</div>
           <div className="mt-2 text-2xl font-semibold text-emerald-600">{fmtMoney(summary.total_paid)}</div>
-          <div className="mt-1 h-1 w-full rounded-full bg-gradient-to-r from-emerald-400 to-teal-400" />
+          <div className="mt-1 h-1 w-full rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
         </div>
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
           <div className="text-xs font-medium uppercase tracking-wide text-slate-500">Total Due</div>

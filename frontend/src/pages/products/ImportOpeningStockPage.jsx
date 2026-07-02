@@ -197,7 +197,7 @@ export default function ImportOpeningStockPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <h1 className="text-xl font-semibold">Import Opening Stock</h1>
         <p className="mt-0.5 text-sm text-emerald-50">
           Bulk-set the starting inventory for products by uploading a <b>CSV</b> or
@@ -287,7 +287,7 @@ export default function ImportOpeningStockPage() {
 
       {/* ── Instructions ─────────────────────────────────────────────────── */}
       <Card padding="p-0" className="overflow-hidden">
-        <div className="bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-white">
+        <div className="bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-white">
           <h2 className="text-base font-semibold">Instructions</h2>
         </div>
         <div className="p-5">

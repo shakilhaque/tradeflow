@@ -212,7 +212,7 @@ export default function PrintLabelsPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <h1 className="text-xl font-semibold">Print Labels</h1>
         <p className="mt-0.5 text-sm text-emerald-50">
           Generate barcode labels for products — pick a layout, configure what shows on each label, then preview &amp; print.
@@ -221,7 +221,7 @@ export default function PrintLabelsPage() {
 
       {/* ── Products card ───────────────────────────────────────────────── */}
       <Card padding="p-0" className="overflow-hidden">
-        <div className="bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-white">
+        <div className="bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-white">
           <h2 className="text-base font-semibold">Add products to generate labels</h2>
         </div>
 
@@ -314,7 +314,7 @@ export default function PrintLabelsPage() {
 
       {/* ── Label content + layout ──────────────────────────────────────── */}
       <Card padding="p-0" className="overflow-hidden">
-        <div className="bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-white">
+        <div className="bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3 text-white">
           <h2 className="text-base font-semibold">Label content</h2>
           <p className="text-[11px] text-emerald-50/90 mt-0.5">
             Every label shows: Company + Branch · Product name · Price · Barcode.

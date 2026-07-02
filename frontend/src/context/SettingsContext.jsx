@@ -169,9 +169,9 @@ export function SettingsProvider({ children }) {
   // Theme color writes CSS variables on <html>; show-help-text writes a
   // body class so global CSS can hide `.field-hint` etc.
   useEffect(() => {
-    const rawKey   = String(data['system.theme_color'] || 'emerald').toLowerCase()
+    const rawKey   = String(data['system.theme_color'] || 'indigo').toLowerCase()
     const themeKey = THEME_ALIASES[rawKey] || rawKey
-    const palette  = THEME_PALETTES[themeKey] || THEME_PALETTES.emerald
+    const palette  = THEME_PALETTES[themeKey] || THEME_PALETTES.indigo
     const root = document.documentElement
     for (const [stop, hex] of Object.entries(palette)) {
       root.style.setProperty(`--theme-${stop}`, hex)

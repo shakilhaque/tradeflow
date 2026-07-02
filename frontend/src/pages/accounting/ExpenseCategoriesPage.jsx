@@ -137,7 +137,7 @@ export default function ExpenseCategoriesPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <h1 className="text-xl font-semibold">Expense Categories</h1>
         <p className="mt-0.5 text-sm text-emerald-50">
           Group operational expenses. Sub-categories can be nested one level deep.
@@ -145,7 +145,7 @@ export default function ExpenseCategoriesPage() {
       </div>
 
       {/* Banner */}
-      <div className="rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3.5 text-white shadow flex items-center justify-between">
+      <div className="rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3.5 text-white shadow flex items-center justify-between">
         <h3 className="text-base font-semibold">All Expense Categories</h3>
         <span className="text-sm">{filtered.length} item{filtered.length === 1 ? '' : 's'}</span>
       </div>

@@ -95,7 +95,7 @@ export default function BrandsPage() {
       </div>
 
       {/* Banner */}
-      <div className="rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3.5 text-white shadow flex items-center justify-between">
+      <div className="rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3.5 text-white shadow flex items-center justify-between">
         <div>
           <h3 className="text-base font-semibold">All your brands</h3>
           <p className="text-xs text-white/85 mt-0.5">{total} brand{total === 1 ? '' : 's'}</p>

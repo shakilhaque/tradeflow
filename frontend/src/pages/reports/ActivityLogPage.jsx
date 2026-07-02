@@ -266,7 +266,7 @@ export default function ActivityLogPage() {
   return (
     <div className="space-y-5">
       {/* ── Heading ───────────────────────────────────────────────────────── */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-xl font-bold text-white tracking-tight">Activity Log</h1>

@@ -203,7 +203,7 @@ export default function MasterDataPage({
   return (
     <div className="space-y-5">
       {/* Header */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 px-6 py-5 text-white shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-xl font-semibold">{title}</h1>

@@ -576,7 +576,7 @@ export default function BusinessSettingsPage() {
   return (
     <div className="space-y-5 pb-24">
       {/* ── Header ──────────────────────────────────────────────────────── */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 shadow-sm">
         <h1 className="text-xl font-bold text-white tracking-tight">Business Settings</h1>
         <p className="text-xs text-emerald-50 mt-0.5">
           Identity, currency, dates and accounting defaults. Changes take

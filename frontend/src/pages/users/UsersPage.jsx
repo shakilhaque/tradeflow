@@ -1019,7 +1019,7 @@ function Kpi({ label, value, accent = 'indigo' }) {
   const COLORS = {
     indigo:  'from-indigo-50 to-indigo-100 ring-indigo-200 text-indigo-700',
     sky:     'from-sky-50 to-sky-100 ring-sky-200 text-sky-700',
-    emerald: 'from-emerald-50 to-emerald-100 ring-emerald-200 text-emerald-700',
+    emerald: 'from-indigo-50 to-cyan-100 ring-emerald-200 text-emerald-700',
     amber:   'from-amber-50 to-amber-100 ring-amber-200 text-amber-700',
   }
   return (

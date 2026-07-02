@@ -286,7 +286,7 @@ export default function ProfitLossReportPage() {
 
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <div>
           <h1 className="text-xl font-semibold">Profit / Loss Report</h1>
           <p className="mt-0.5 text-sm text-emerald-50">Revenue, cost of goods, expenses and net profit.</p>
@@ -498,11 +498,11 @@ function SectionHeader({ title, tone = 'emerald' }) {
 }
 
 const ACCENTS = {
-  emerald: 'from-emerald-600 to-green-600',
-  green:   'from-green-600   to-teal-600',
+  emerald: 'from-indigo-600 to-cyan-500',
+  green:   'from-indigo-600   to-cyan-600',
   teal:    'from-teal-600    to-emerald-600',
   // Back-compat keys.
-  brand:   'from-emerald-600 to-green-600',
+  brand:   'from-indigo-600 to-cyan-500',
   rose:    'from-lime-600    to-emerald-600',
 }
 

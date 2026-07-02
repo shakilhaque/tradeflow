@@ -64,7 +64,7 @@ export default function BranchComparisonReportPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <h1 className="text-xl font-semibold">Branch Comparison</h1>
         <p className="mt-0.5 text-sm text-emerald-50">
           Consolidated view across every branch — sales, purchases, expenses and profit side by side.

@@ -127,7 +127,7 @@ export default function PaymentAccountsPage() {
   return (
     <div className="space-y-5">
       {/* ── Heading banner ───────────────────────────────────────────────── */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 shadow-sm flex items-center justify-between gap-3 flex-wrap">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 shadow-sm flex items-center justify-between gap-3 flex-wrap">
         <div>
           <h1 className="text-xl font-bold text-white tracking-tight">Payment Accounts</h1>
           <p className="text-xs text-emerald-50 mt-0.5">

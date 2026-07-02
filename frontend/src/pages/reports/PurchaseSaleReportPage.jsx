@@ -282,7 +282,7 @@ export default function PurchaseSaleReportPage() {
   return (
     <div className="space-y-5">
       {/* ── Heading ───────────────────────────────────────────────────────── */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-xl font-bold text-white tracking-tight">Purchase &amp; Sale Report</h1>
@@ -424,7 +424,7 @@ export default function PurchaseSaleReportPage() {
 
       {/* ── Overall section ──────────────────────────────────────────────── */}
       <div className="rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden">
-        <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-3">
+        <div className="bg-gradient-to-r from-indigo-600 to-indigo-500 px-6 py-3">
           <h2 className="text-sm font-bold text-white tracking-tight">
             Overall · (Sale − Sell Return) − (Purchase − Purchase Return)
           </h2>
@@ -475,7 +475,7 @@ export default function PurchaseSaleReportPage() {
 
 function SummaryCard({ title, icon, tone = 'orange', children }) {
   const headers = {
-    orange: 'from-emerald-500 to-emerald-600',
+    orange: 'from-indigo-600 to-indigo-500',
   }
   return (
     <div className="rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden">

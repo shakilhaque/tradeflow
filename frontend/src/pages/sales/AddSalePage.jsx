@@ -687,7 +687,7 @@ export default function AddSalePage() {
         .addsale-compact input[type=datetime-local],
         .addsale-compact input[type=date] { padding-right: 4px !important; }
       `}</style>
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 shadow-sm flex flex-wrap items-center justify-between gap-3">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 shadow-sm flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-semibold text-white">
             {form.status === 'DRAFT' ? 'Add Draft' : form.status === 'QUOTATION' ? 'Add Quotation' : 'Add Sale'}
@@ -1191,7 +1191,7 @@ function TotalSummaryCard({
       : 'PARTIAL'
   const STATUS_THEME = {
     PAID:    { pill: 'bg-emerald-100 text-emerald-700 ring-emerald-200', dot: 'bg-emerald-500',
-               banner: 'from-emerald-500 to-green-600' },
+               banner: 'from-indigo-600 to-cyan-500' },
     PARTIAL: { pill: 'bg-amber-100 text-amber-800 ring-amber-200',       dot: 'bg-amber-500',
                banner: 'from-amber-500 to-orange-500' },
     DUE:     { pill: 'bg-rose-100 text-rose-700 ring-rose-200',          dot: 'bg-rose-500',

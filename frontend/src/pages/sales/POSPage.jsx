@@ -37,7 +37,7 @@ const fmtDateTime = (d) => new Date(d).toLocaleString(undefined, {
 
 const TILE_TINTS = [
   'from-blue-50 to-blue-100/40',
-  'from-emerald-50 to-emerald-100/40',
+  'from-indigo-50 to-cyan-100/40',
   'from-amber-50 to-amber-100/40',
   'from-rose-50 to-rose-100/40',
   'from-violet-50 to-violet-100/40',
@@ -2214,7 +2214,7 @@ function PaymentModal({ method, total, itemCount, onClose, onConfirm }) {
           </div>
         </div>
 
-        <div className="rounded-lg bg-gradient-to-b from-emerald-500 to-teal-500 text-white p-4 space-y-3">
+        <div className="rounded-lg bg-gradient-to-b from-indigo-600 to-cyan-500 text-white p-4 space-y-3">
           <Stat label="Total Items"   value={itemCount} />
           <div className="h-px bg-white/20" />
           <Stat label="Total Payable" value={fmtMoney(total)} big />
@@ -2424,7 +2424,7 @@ function MultiplePayModal({ total, itemCount, advanceBalance = 0, onClose, onCon
           <Button variant="secondary" size="sm" onClick={add} leftIcon={<IconPlus />}>Add Payment Row</Button>
         </div>
 
-        <div className="rounded-lg bg-gradient-to-b from-emerald-500 to-teal-500 text-white p-4 space-y-3">
+        <div className="rounded-lg bg-gradient-to-b from-indigo-600 to-cyan-500 text-white p-4 space-y-3">
           <Stat label="Total Items"   value={itemCount} />
           <div className="h-px bg-white/20" />
           <Stat label="Advance Balance" value={fmtMoney(advanceBalance)} />
@@ -2860,7 +2860,7 @@ function ReceiptModal({ sale, customer, location, onClose }) {
   }))
   return (
     <Modal open onClose={onClose} title="Payment successful" size="md">
-      <div className="rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white p-6 text-center">
+      <div className="rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-500 text-white p-6 text-center">
         <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/20 mb-3">
           <svg className="w-7 h-7" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z" clipRule="evenodd" /></svg>
         </div>

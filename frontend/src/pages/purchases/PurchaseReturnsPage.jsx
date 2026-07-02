@@ -125,7 +125,7 @@ export default function PurchaseReturnsPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <h1 className="text-xl font-semibold">Purchase Returns</h1>
         <p className="mt-0.5 text-sm text-emerald-50">Track goods returned to suppliers.</p>
       </div>
@@ -158,7 +158,7 @@ export default function PurchaseReturnsPage() {
         </div>
       </Card>
 
-      <div className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 px-5 py-3.5 text-white shadow flex items-center justify-between">
+      <div className="rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 px-5 py-3.5 text-white shadow flex items-center justify-between">
         <h3 className="text-base font-semibold">All Purchase Returns</h3>
         <span className="text-sm">Total Returned: {fmtMoney(data?.summary?.total_return ?? totals.grand)}</span>
       </div>

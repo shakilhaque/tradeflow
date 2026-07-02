@@ -834,7 +834,7 @@ export default function AddProductPage() {
   return (
     <div className="space-y-5">
       {/* Header — modern indigo/sky gradient */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-xl font-semibold">{editing ? 'Edit Product' : 'Add New Product'}</h1>

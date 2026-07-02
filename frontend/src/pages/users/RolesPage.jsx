@@ -429,7 +429,7 @@ function Kpi({ label, value, accent = 'indigo' }) {
   const COLORS = {
     indigo:  'from-indigo-50 to-indigo-100 ring-indigo-200 text-indigo-700',
     sky:     'from-sky-50 to-sky-100 ring-sky-200 text-sky-700',
-    emerald: 'from-emerald-50 to-emerald-100 ring-emerald-200 text-emerald-700',
+    emerald: 'from-indigo-50 to-cyan-100 ring-emerald-200 text-emerald-700',
   }
   return (
     <div className={`rounded-2xl bg-gradient-to-br ${COLORS[accent] ?? COLORS.indigo} ring-1 px-5 py-4`}>

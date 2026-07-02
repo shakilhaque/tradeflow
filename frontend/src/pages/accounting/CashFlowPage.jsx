@@ -213,7 +213,7 @@ export default function CashFlowPage() {
 
   return (
     <div className="space-y-5">
-      <div className="flex items-center justify-between flex-wrap gap-3 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="flex items-center justify-between flex-wrap gap-3 rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <div>
           <h1 className="text-xl font-semibold">Cash Flow</h1>
           <p className="mt-0.5 text-sm text-emerald-50">
@@ -425,7 +425,7 @@ function describePlain(r) {
 }
 
 const ACCENTS = {
-  emerald: { bg: 'from-emerald-500 to-teal-500',   ring: 'ring-emerald-100' },
+  emerald: { bg: 'from-indigo-600 to-cyan-500',   ring: 'ring-emerald-100' },
   rose:    { bg: 'from-rose-500    to-pink-500',   ring: 'ring-rose-100' },
   brand:   { bg: 'from-brand-600   to-indigo-600', ring: 'ring-brand-100' },
   amber:   { bg: 'from-amber-500   to-orange-500', ring: 'ring-amber-100' },

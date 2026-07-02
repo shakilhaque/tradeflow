@@ -334,7 +334,7 @@ export default function SalesReportPage() {
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <span className="w-2 h-7 rounded-full bg-gradient-to-b from-emerald-500 to-green-600" />
+            <span className="w-2 h-7 rounded-full bg-gradient-to-b from-indigo-600 to-cyan-500" />
             Product Sell Report
           </h1>
           <p className="mt-1 text-sm text-gray-500">Detailed and grouped views of sold items</p>
@@ -343,7 +343,7 @@ export default function SalesReportPage() {
 
       {/* Filters Card */}
       <Card padding="p-0" className="overflow-hidden border-emerald-100 ring-1 ring-emerald-50">
-        <div className="flex items-center gap-2 px-5 py-3 border-b border-emerald-100 bg-gradient-to-r from-emerald-50 to-green-50">
+        <div className="flex items-center gap-2 px-5 py-3 border-b border-emerald-100 bg-gradient-to-r from-indigo-50 to-cyan-50">
           <FilterIcon className="w-5 h-5 text-emerald-600" />
           <h2 className="font-semibold text-emerald-800">Filters</h2>
         </div>
@@ -430,8 +430,8 @@ export default function SalesReportPage() {
             <button
               onClick={onApplyFilters}
               disabled={loading}
-              className="flex-1 rounded-lg bg-gradient-to-r from-emerald-500 to-green-600 px-4 py-2 text-sm
-                         font-semibold text-white shadow-sm hover:from-emerald-600 hover:to-green-700
+              className="flex-1 rounded-lg bg-gradient-to-r from-indigo-600 to-cyan-500 px-4 py-2 text-sm
+                         font-semibold text-white shadow-sm hover:from-indigo-600 hover:to-cyan-700
                          disabled:opacity-60"
             >
               {loading ? 'Loading…' : 'Apply'}
@@ -609,7 +609,7 @@ function Kpi({ label, value, icon, highlight }) {
     <div className={[
       'rounded-xl border p-4 flex items-center gap-3 shadow-sm',
       highlight
-        ? 'bg-gradient-to-br from-emerald-500 to-green-600 border-emerald-600 text-white'
+        ? 'bg-gradient-to-br from-indigo-600 to-cyan-500 border-emerald-600 text-white'
         : 'bg-white border-gray-100 text-gray-700',
     ].join(' ')}>
       <div className={[

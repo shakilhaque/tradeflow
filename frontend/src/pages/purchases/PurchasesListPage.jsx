@@ -342,7 +342,7 @@ ${data.notes ? `<h3>NOTES</h3><div class="block" style="background:#f9fafb;borde
   return (
     <div className="space-y-5">
       {/* Header */}
-      <div className="flex items-center justify-between rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-green-600 px-6 py-5 text-white shadow-sm">
+      <div className="flex items-center justify-between rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-cyan-500 px-6 py-5 text-white shadow-sm">
         <div>
           <h1 className="text-xl font-semibold">Purchases</h1>
           <p className="mt-0.5 text-sm text-emerald-50">Manage purchase orders, supplier bills, and stock receipts.</p>
@@ -591,7 +591,7 @@ ${data.notes ? `<h3>NOTES</h3><div class="block" style="background:#f9fafb;borde
 function KpiCard({ label, value, accent = 'brand', valueClass = '' }) {
   const accents = {
     violet:  'from-violet-500/10 to-violet-500/5 text-violet-700 ring-violet-200',
-    emerald: 'from-emerald-500/10 to-emerald-500/5 text-emerald-700 ring-emerald-200',
+    emerald: 'from-indigo-500/10 to-indigo-500/5 text-emerald-700 ring-emerald-200',
     rose:    'from-rose-500/10 to-rose-500/5 text-rose-700 ring-rose-200',
     indigo:  'from-indigo-500/10 to-indigo-500/5 text-indigo-700 ring-indigo-200',
     brand:   'from-brand-500/10 to-brand-500/5 text-brand-700 ring-brand-200',

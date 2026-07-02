@@ -19,17 +19,17 @@ export default {
          * JS runs and in the static build.
          */
         brand: {
-          50:  'rgb(var(--theme-50-rgb,  236 253 245) / <alpha-value>)',
-          100: 'rgb(var(--theme-100-rgb, 209 250 229) / <alpha-value>)',
-          200: 'rgb(var(--theme-200-rgb, 167 243 208) / <alpha-value>)',
-          300: 'rgb(var(--theme-300-rgb, 110 231 183) / <alpha-value>)',
-          400: 'rgb(var(--theme-400-rgb, 52 211 153) / <alpha-value>)',
-          500: 'rgb(var(--theme-500-rgb, 16 185 129) / <alpha-value>)',
-          600: 'rgb(var(--theme-600-rgb, 5 150 105) / <alpha-value>)',
-          700: 'rgb(var(--theme-700-rgb, 4 120 87) / <alpha-value>)',
-          800: 'rgb(var(--theme-800-rgb, 6 95 70) / <alpha-value>)',
-          900: 'rgb(var(--theme-900-rgb, 6 78 59) / <alpha-value>)',
-          950: 'rgb(var(--theme-950-rgb, 2 44 34) / <alpha-value>)',
+          50:  'rgb(var(--theme-50-rgb,  238 242 255) / <alpha-value>)',
+          100: 'rgb(var(--theme-100-rgb, 224 231 255) / <alpha-value>)',
+          200: 'rgb(var(--theme-200-rgb, 199 210 254) / <alpha-value>)',
+          300: 'rgb(var(--theme-300-rgb, 165 180 252) / <alpha-value>)',
+          400: 'rgb(var(--theme-400-rgb, 129 140 248) / <alpha-value>)',
+          500: 'rgb(var(--theme-500-rgb, 99 102 241) / <alpha-value>)',
+          600: 'rgb(var(--theme-600-rgb, 79 70 229) / <alpha-value>)',
+          700: 'rgb(var(--theme-700-rgb, 67 56 202) / <alpha-value>)',
+          800: 'rgb(var(--theme-800-rgb, 55 48 163) / <alpha-value>)',
+          900: 'rgb(var(--theme-900-rgb, 49 46 129) / <alpha-value>)',
+          950: 'rgb(var(--theme-950-rgb, 30 27 75) / <alpha-value>)',
         },
         // Navy used by the wordmark + headings on light surfaces.
         navy: {

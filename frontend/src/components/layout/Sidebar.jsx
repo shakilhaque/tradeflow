@@ -16,8 +16,8 @@ const NAV_GROUPS = [
       {
         label: 'Sales', icon: <IconReceipt />, perm: 'can_create_sale',
         children: [
-          { label: 'All Sales',         path: '/sells',           perm: 'can_create_sale' },
           { label: 'Sales on POS',      path: '/sales/pos',       perm: 'can_create_sale' },
+          { label: 'Sales List POS',    path: '/sales/pos-list',  perm: 'can_create_sale' },
           { label: 'Sale Return',       path: '/sales/returns',   perm: 'can_create_sale' },
           { label: 'List Quotation',    path: '/sales/quotations',     perm: 'can_create_sale' },
           { label: 'Add Quotation',     path: '/sales/add-quotation',  perm: 'can_create_sale' },

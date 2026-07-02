@@ -1,9 +1,9 @@
 /**
- * NSL-POS logo component — used across auth pages and the app shell.
+ * TradeFlow logo component — used across auth pages and the app shell.
  *
  *   <Logo />                       icon + wordmark (default)
  *   <Logo variant="icon" />        just the icon mark
- *   <Logo variant="wordmark" />    text-only ("NSL-POS")
+ *   <Logo variant="wordmark" />    text-only ("TradeFlow")
  *   <Logo size="sm|md|lg|xl" />    sizing
  *   <Logo onDark />                light/white variant for dark backgrounds
  */
@@ -29,11 +29,17 @@ export default function Logo({
 
   const Icon = (
     <img
-      src="/nsl-icon.svg"
-      alt="NSL-POS"
+      src="/tradeflow-icon.svg"
+      alt="TradeFlow"
       className={`${sz.icon} object-contain shrink-0`}
       draggable="false"
     />
+  )
+
+  const Word = (
+    <span className={`font-extrabold tracking-tight ${wordmarkColor} ${sz.word}`}>
+      Trade<span className="text-brand-500">Flow</span>
+    </span>
   )
 
   if (variant === 'icon') {
@@ -41,20 +47,14 @@ export default function Logo({
   }
 
   if (variant === 'wordmark') {
-    return (
-      <span className={`font-extrabold tracking-tight ${wordmarkColor} ${sz.word} ${className}`}>
-        NSL<span className="text-brand-500">·</span>POS
-      </span>
-    )
+    return <span className={className}>{Word}</span>
   }
 
   // 'lockup' / 'full' — icon + wordmark
   return (
     <div className={`inline-flex items-center gap-2 ${className}`}>
       {Icon}
-      <span className={`font-extrabold tracking-tight ${wordmarkColor} ${sz.word}`}>
-        NSL<span className="text-brand-500">·</span>POS
-      </span>
+      {Word}
     </div>
   )
 }

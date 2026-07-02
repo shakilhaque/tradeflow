@@ -1,5 +1,5 @@
 """
-Django settings — NSL-POS (single-client POS & Accounting)
+Django settings — TradeFlow (single-client POS & Accounting)
 """
 from datetime import timedelta
 from pathlib import Path
@@ -170,7 +170,7 @@ SUPPORT_PHONE          = config("SUPPORT_PHONE",          default="01833387744")
 SUPPORT_OFFICE_ADDRESS = config("SUPPORT_OFFICE_ADDRESS", default="House #12, Road 7, Dhanmondi, Dhaka 1209, Bangladesh")
 SUPPORT_HOURS          = config("SUPPORT_HOURS",          default="Sun – Thu, 10 am – 6 pm (BD time)")
 FRONTEND_URL   = config("FRONTEND_URL",   default="http://localhost:3050")
-APP_NAME       = config("APP_NAME",       default="NSL-POS")
+APP_NAME       = config("APP_NAME",       default="TradeFlow")
 
 PAYMENT_GATEWAY_URL            = config("PAYMENT_GATEWAY_URL",            default="")
 PAYMENT_GATEWAY_WEBHOOK_SECRET = config("PAYMENT_GATEWAY_WEBHOOK_SECRET", default="")

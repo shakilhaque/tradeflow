@@ -1,4 +1,4 @@
-# NSL-POS
+# TradeFlow
 
 Single-client point-of-sale, inventory and accounting system.
 

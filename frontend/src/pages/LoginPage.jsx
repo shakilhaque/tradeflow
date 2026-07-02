@@ -66,7 +66,7 @@ export default function LoginPage() {
         <div className="mb-8 flex flex-col items-center text-center">
           <Logo variant="icon" size="2xl" />
           <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white">
-            NSL<span className="text-brand-400">·</span>POS
+            Trade<span className="text-brand-400">Flow</span>
           </h1>
           <p className="mt-1 text-sm text-slate-400">
             Sign in to your workspace
@@ -124,7 +124,7 @@ export default function LoginPage() {
         </div>
 
         <p className="mt-6 text-center text-[11px] text-slate-500">
-          © {new Date().getFullYear()} NSL-POS
+          © {new Date().getFullYear()} TradeFlow
         </p>
       </div>
     </div>

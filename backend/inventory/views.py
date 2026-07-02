@@ -213,27 +213,9 @@ class LocationViewSet(viewsets.ModelViewSet):
         services.ensure_default_master_data()
         return super().list(request, *args, **kwargs)
 
-    # ── Subscription-gated branch limit ──────────────────────────────────────
     def _plan_limits(self, request):
-        """Return (max_branches, plan_name) for the requesting tenant. 0 = unlimited.
-        Defensive: never raises — falls back to (1, None) on any error so
-        the locations endpoints stay usable even if billing tables are missing.
-        """
-        try:
-            from accounts.models import Subscription
-            sub = (
-                Subscription.objects.using("default")
-                .filter(user=request.user, status="active")
-                .select_related("plan")
-                .first()
-            )
-            if not sub or not sub.plan:
-                return 1, None
-            limit = getattr(sub.plan, "max_branches", 1) or 0
-            return int(limit), sub.plan.name
-        except Exception as exc:
-            logger.warning("Failed to resolve plan limits: %s", exc)
-            return 1, None
+        """Single-client build: unlimited branches (no subscription plan gating)."""
+        return 0, None
 
     def _current_active_count(self, exclude_id=None):
         qs = Location.objects.filter(is_active=True)

@@ -61,3 +61,6 @@ desktop.ini
 server.log
 *.bak
 .tmp/
+
+# Vite temp config files
+frontend/vite.config.js.timestamp-*

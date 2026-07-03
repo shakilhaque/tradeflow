@@ -353,25 +353,28 @@ SIMPLE_JWT = {
     "USER_AUTHENTICATION_RULE": "accounts.auth.allow_suspended_user_rule",
 }
 
-# ── Redis cache — used for report caching and rate limiting ───────────────────
-REDIS_URL = config("REDIS_URL", default="redis://localhost:6379/3")
+# ── Cache — in-memory by default (no external service required) ───────────────
+# Used for report caching + API throttling. Redis is OPTIONAL: it's only needed
+# if you run several worker processes and want the cache shared across them.
+# Enable it by setting USE_REDIS_CACHE=True (and REDIS_URL) in the env.
+REDIS_URL       = config("REDIS_URL", default="redis://localhost:6379/3")
+USE_REDIS_CACHE = config("USE_REDIS_CACHE", cast=bool, default=False)
 
-if DEBUG:
-    # Development: use in-memory cache so Redis is not required locally.
+if USE_REDIS_CACHE:
     CACHES = {
         "default": {
-            "BACKEND":    "django.core.cache.backends.locmem.LocMemCache",
-            "LOCATION":   "saas-dev-cache",
-            "KEY_PREFIX": "saas",
+            "BACKEND":    "django.core.cache.backends.redis.RedisCache",
+            "LOCATION":   REDIS_URL,
+            "KEY_PREFIX": "tradeflow",
             "TIMEOUT":    300,
         }
     }
 else:
     CACHES = {
         "default": {
-            "BACKEND":    "django.core.cache.backends.redis.RedisCache",
-            "LOCATION":   REDIS_URL,
-            "KEY_PREFIX": "saas",
+            "BACKEND":    "django.core.cache.backends.locmem.LocMemCache",
+            "LOCATION":   "tradeflow-cache",
+            "KEY_PREFIX": "tradeflow",
             "TIMEOUT":    300,
         }
     }

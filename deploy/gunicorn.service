@@ -6,11 +6,11 @@ After=network.target postgresql.service
 Type=notify
 User=www-data
 Group=www-data
-WorkingDirectory=/var/www/tradeflow/backend
-Environment="PATH=/var/www/tradeflow/backend/.venv/bin"
-EnvironmentFile=/var/www/tradeflow/backend/.env
+WorkingDirectory=/var/www/html/tradeflow/backend
+Environment="PATH=/var/www/html/tradeflow/backend/.venv/bin"
+EnvironmentFile=/var/www/html/tradeflow/backend/.env
 
-ExecStart=/var/www/tradeflow/backend/.venv/bin/gunicorn \
+ExecStart=/var/www/html/tradeflow/backend/.venv/bin/gunicorn \
     --workers 3 \
     --bind 127.0.0.1:8003 \
     --timeout 60 \

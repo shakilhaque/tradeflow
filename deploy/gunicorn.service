@@ -12,7 +12,7 @@ EnvironmentFile=/var/www/html/tradeflow/backend/.env
 
 ExecStart=/var/www/html/tradeflow/backend/.venv/bin/gunicorn \
     --workers 3 \
-    --bind 127.0.0.1:8003 \
+    --bind 127.0.0.1:8010 \
     --timeout 60 \
     config.wsgi:application
 
